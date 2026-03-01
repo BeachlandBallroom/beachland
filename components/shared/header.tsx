@@ -10,21 +10,23 @@ interface Props {
 
 export const Header: React.FC<Props> = ({ className }) => {
     return (
-        <header className={cn('border border-b', className)}>
+        <header className={cn('border-b border-muted-foreground', className)}>
             <Container className='flex items-center justify-between py-2'>
-                {/* {Левая часть} */}
+                {/* {Left part} */}
                 <div className="flex items-center gap-4">
                     <Image src="/logo1.jpg" alt="Logo" width={55} height={55} />
                     <div>
-                        <h1 className="text-2xl uppercase font-black">Beachland</h1>
+                        <Image src="logo2.svg" width={200} height={200} alt='Logo'/>
                     </div>
                 </div>
 
-                {/* {Правая часть} */}
+                {/* {Right part} */}
                 <div className="flex items-center gap-3">
                     <Button variant={'outline'} className='flex item-center gap-2'>
-                        <User size={35}/>
-                        Войти
+                        Log In
+                    </Button>
+                    <Button variant={'default'} className='flex item-center gap-2'>
+                        Sign Up
                     </Button>
                 </div>
             </Container>

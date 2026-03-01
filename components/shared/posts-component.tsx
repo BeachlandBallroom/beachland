@@ -1,0 +1,116 @@
+import { Container, Title } from "@/components/shared";
+
+const PostsComponent = async () => {
+    return (
+        <Container className="mt-5 w-200">
+        <Title text="All posts" size="lg" className="font-extrabold"/>
+
+        {/* Create post*/}
+        <div className="border rounded-md mt-4 border-t-[0.5px] border-b-[0.5px] border-gray-700 h-32 relative">
+          <div className="ml-3 mt-3 w-10 h-10 bg-primary rounded-full"></div>
+          <div className="ml-3 mt-3 flex flex-col">
+            <div className="mr-3 border-b-[0.5px] border-gray-600">
+              <input 
+                type="text"
+                className="w-full h-full bg-transparent border-b-[0.5px] border-gray-600 outline-none border-none"
+                placeholder="What's happening?"
+              />
+            </div>   
+          </div>
+        </div>
+
+        {/* Show posts*/}
+        <div className="mb-5">
+          <div className="border rounded-md mt-4 border-t-[0.5px] border-b-[0.5px] border-gray-700 min-h-20 relative flex items-start p-3">
+            <div className="w-10 h-10 bg-primary rounded-full shrink-0"></div>
+            <div className="ml-3 flex-1">
+              <p className="wrap-break-word">
+                [Letra de "NUEVAYoL"]
+
+[Intro]
+¡Nueva Yol!
+
+[Coro: Andy Montañez & Bad Bunny]
+Si te quieres divertir
+Con encanto y con primor
+Solo tienes que vivir (¿Pa' dónde?)
+Un verano en Nueva York (¡Nueva York!)
+Si te quieres divertir
+Con encanto y con primor (¿Pero qué es esto?)
+Solo tienes que vivir (¿Y este frío?)
+Un verano en Nueva York (Un ratito na' má')
+
+[Verso 1: Bad Bunny]
+Ey, ey, ey, 4 de julio, 4th de July
+Ando con mi primo, borracho, rulay
+Los mío' en El Bronx saben la que hay
+Con la nota en high por Washington Heights
+Willie Colón, me dicen "еl malo", ey
+Porque pasan los año' y sigo dando palo'
+Vendiеndo disco' como cuadro' 'e Frida Kahlo
+El perico es blanco, sí, sí, el tusi rosita, eh, eh
+No te confunda', no, no, mejor evita, ey (Ey)
+Un shot de cañita en casa de Toñita y PR se siente cerquita
+Sí, sí, sí, tengo el campeonato, nadie me lo quita
+You might also like
+PERFuMITO NUEVO
+Bad Bunny & RaiNao
+Bad Bunny - NUEVAYoL (English Translation)
+Genius English Translations
+DtMF
+Bad Bunny
+[Interludio]
+The best in the world
+Number one, the best in the world, ¿okey? ¡Puerto Rico!
+
+[Verso 2: Bad Bunny]
+¿Cómo Bad Bunny va a ser rey del pop, ey
+Con reggaetón y dembow? Ey
+Con reggaetón y dembow, sí
+Con reggaetón y dembow
+¿Cómo Bad Bunny va a ser rey del pop, ey
+Con reggaetón y dembow?
+Me siento como el Lapiz en "Capea El Dough"
+Cuando yo nací, fue que nació el flow
+De la'o a la'o, ping-pong
+Un flow pesa'o, Big Pun
+Con silenciador les robamo' las gata', James Bond, ey
+Yo estoy en la mía, no tengo adversario, no
+Con Los Yankee' y Los Met', Juan Soto
+A correr, que otra ve' la sacamo' 'el estadio (Ey)
+
+[Coro: Andy Montañez & Bad Bunny]
+Si te quieres divertir
+Con encanto y con primor
+Solo tienes que vivir (Ya mismo nos vamo')
+Un verano en Nueva— (Un ratito má', un ratito)
+[Interludio: Bad Bunny]
+Shh, cuida'o, que nadie nos escuche
+Shh, cuida'o, que nadie nos escuche
+Shh, cuida'o, que nadie nos escuche
+Shh, cuida—
+
+[Verso 3: Bad Bunny]
+Tú tiene' piquete, mami, yo también
+Tú estás buena, yo estoy bueno también
+Huelo rico y ando con los de cien
+Si tú lo quiere', lo tiene' que mover
+Tú tiene' piquete, mami, yo también
+Tú estás buena, yo estoy bueno también
+Huelo rico y ando con los de cien
+Si tú lo quiere', lo tiene' que mover
+
+[Outro: Bad Bunny]
+Lo tiene' que move'-ve'-ve'-ve'-ve'-ve'-ve'-ve'-ve'-ve'-ve'-ve'
+Lo tiene' que move'-ve'-ve'-ve'-ve'-ve'-ve'-ve'-ve'-ve'-ve'-ve'
+Lo tiene' que move'-ve'-ve'-ve'-ve'-ve'-ve'-ve'-ve'-ve'-ve'-ve'
+Lo tiene' que move'-ve'-ve'-ve'-ve'-ve'-ve'-ve'-ve'-ve'-ve'-ve'-ve'-ve'-ve'-ve'
+Shh
+              </p>
+            </div>
+          </div>
+        </div>
+        </Container>
+    );
+};
+export default PostsComponent;
