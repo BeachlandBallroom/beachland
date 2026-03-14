@@ -11,13 +11,33 @@ services:
       - "5438:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d mydb"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
     
   backend:
     build: ./server
+    container_name: next_backend
     ports:
       - "5000:5000"
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres@postgres:5438/mydb
     depends_on:
-      - postgres
+      postgres:
+        condition: service_healthy
+
+  frontend:
+    build: ./client
+    container_name: next_frontend
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:5000
+    depends_on:
+      - backend
 
 volumes:
   postgres_data:
