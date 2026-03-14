@@ -23,7 +23,7 @@ services:
     ports:
       - "5000:5000"
     environment:
-      DATABASE_URL: postgresql://postgres:postgres@postgres:5438/mydb
+      DATABASE_URL: postgresql://postgres:postpost@localhost:5438/mydb
     depends_on:
       postgres:
         condition: service_healthy
